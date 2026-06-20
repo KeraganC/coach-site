@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keragan Cavolo | Social Health & Connection Coaching</title>
-  <meta name="description" content="Keragan Cavolo helps people build more meaningful relationships, stronger community, and a deeper sense of belonging through social health and connection coaching." />
+  <title>Keragan Cavolo | Social Health & Relational Fitness</title>
+  <meta name="description" content="Keragan Cavolo helps people build more meaningful friendships, stronger community, and a deeper sense of belonging through social health and relational fitness coaching." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -64,9 +64,10 @@
       margin: 0 auto;
       padding: 0 1.5rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 0.6rem 1rem;
     }
 
     .logo {
@@ -249,7 +250,8 @@
 
     @media (max-width: 480px) {
       header { padding-top: 1.5rem; }
-      .header-inner nav { gap: 0.8rem; }
+      .logo { font-size: 1.35rem; }
+      .header-inner nav { gap: 0.7rem 1rem; font-size: 0.88rem; }
       .hero-photo { width: 180px; height: 180px; }
     }
 
@@ -379,6 +381,16 @@
       .hero-about { grid-template-columns: 1fr; gap: 1.75rem; }
       .hero-photo-wrap { order: -1; }
       .hero-photo { width: 180px; height: 180px; }
+    }
+
+    @media (max-width: 420px) {
+      .hero-statement h1 { font-size: 1.95rem; max-width: 13ch; letter-spacing: -0.03em; }
+      .hero-photo { width: 150px; height: 150px; }
+      .talk-about { padding: 3rem 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
     }
 
   </style>

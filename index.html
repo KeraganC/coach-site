@@ -145,7 +145,13 @@
     }
 
     /* ---------- LET'S TALK ABOUT ---------- */
-    .talk-about { padding: 0 0 4rem; }
+    .talk-about {
+      max-width: var(--wide-w);
+      margin: 0 auto 4.5rem;
+      padding: 4rem 1.5rem;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
 
     .talk-about h2 {
       font-size: clamp(1.6rem, 3vw, 2rem);
@@ -413,7 +419,7 @@
     </section>
 
     <section class="talk-about" id="talk-about">
-      <div class="wrap">
+      <div>
         <h2>Let's talk about</h2>
         <div class="talk-grid">
           <div class="talk-item">

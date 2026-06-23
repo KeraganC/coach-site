@@ -124,6 +124,8 @@
       margin: 0 0 0.75rem;
     }
 
+    .keep-together { white-space: nowrap; }
+
     .hero p {
       font-size: 1.08rem;
       margin: 0 0 1.3rem 0;
@@ -243,6 +245,24 @@
       justify-content: center;
     }
 
+    .substack-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--cream);
+      background: var(--accent-deep);
+      padding: 0.8rem 1.6rem;
+      border-radius: 100px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .substack-button:hover {
+      background: var(--ink);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
     @media (max-width: 760px){
       .post-grid{ grid-template-columns: 1fr; }
     }
@@ -257,8 +277,257 @@
       .header-inner { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
       .header-inner nav { width: 100%; gap: 0.6rem 1.1rem; font-size: 0.9rem; }
       .logo { font-size: 1.5rem; }
+      .hero-statement { text-align: center; }
+      .hero-statement h1 { margin: 0 auto; }
     }
 
+
+    /* ---------- WHO THIS IS FOR ---------- */
+    .who-for {
+      max-width: var(--wide-w);
+      margin: 0 auto 0;
+      padding: 4rem 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .who-for h2 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .who-for .sub {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      margin: 0 0 2rem 0;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .who-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+      font-size: 1rem;
+    }
+
+    .who-item::before {
+      content: "→";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .who-not {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      border-left: 2px solid var(--line);
+      padding-left: 1rem;
+      margin-top: 1.5rem;
+      max-width: 60ch;
+    }
+
+    @media (max-width: 620px) {
+      .who-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- WORK WITH ME ---------- */
+    .work-with-me {
+      background: var(--cream-deep);
+      padding: 4rem 0;
+    }
+
+    .work-with-me-inner {
+      max-width: var(--wide-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+
+    .work-with-me h2 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .work-with-me p {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      margin: 0 0 1rem 0;
+    }
+
+    .work-with-me ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .work-with-me li {
+      font-size: 1rem;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+    }
+
+    .work-with-me li::before {
+      content: "✦";
+      color: var(--accent);
+      font-size: 0.65rem;
+      flex-shrink: 0;
+    }
+
+    .inquiry-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--cream);
+      background: var(--accent-deep);
+      padding: 0.9rem 1.8rem;
+      border-radius: 100px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .inquiry-btn:hover {
+      background: var(--ink);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    .work-aside {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 1.75rem;
+      border: 1px solid var(--line);
+    }
+
+    .work-aside h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent-deep);
+      margin: 0 0 0.3rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.8rem;
+    }
+
+    .work-aside p {
+      font-size: 1rem;
+      color: var(--ink);
+      margin: 0 0 1.5rem 0;
+    }
+
+    .work-aside p:last-child { margin: 0; }
+
+    @media (max-width: 700px) {
+      .work-with-me-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- WORKSHOPS ---------- */
+    .workshops {
+      padding: 4rem 0;
+    }
+
+    .workshops-inner {
+      max-width: var(--wide-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .workshops-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .workshops h2 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 700;
+      margin: 0 0 0.3rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .workshops .sub {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      margin: 0;
+    }
+
+    .luma-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--ink);
+      border: 1.5px solid var(--line);
+      padding: 0.7rem 1.3rem;
+      border-radius: 100px;
+      white-space: nowrap;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .luma-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent-deep);
+      text-decoration: none;
+    }
+
+    .workshop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .workshop-card {
+      background: var(--cream-deep);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+    }
+
+    .workshop-card .ws-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.5rem 0;
+      display: block;
+    }
+
+    .workshop-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem 0;
+      line-height: 1.3;
+    }
+
+    .workshop-card .ws-meta {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+      .workshop-grid { grid-template-columns: 1fr; }
+    }
 
     /* ---------- RESEARCH NOTE ---------- */
     .research-note {
@@ -370,6 +639,11 @@
       color: var(--ink);
     }
 
+    .hero-about .credentials {
+      font-size: 1.02rem;
+      color: var(--ink-soft);
+    }
+
     .hero-photo-wrap { padding-top: 0.35rem; }
 
     .hero-photo {
@@ -406,8 +680,9 @@
       <a href="#" class="logo" aria-label="Connect Better with Keragan home">Connect Better with Keragan</a>
       <nav aria-label="Main navigation">
         <a href="#talk-about">Let’s Explore</a>
+        <a href="#work-with-me">Work With Me</a>
+        <a href="#workshops">Workshops</a>
         <a href="#writing">My Writing</a>
-        <a href="https://keraganscontemplations.substack.com" target="_blank" rel="noopener noreferrer">Substack ↗</a>
       </nav>
     </div>
   </header>
@@ -415,7 +690,7 @@
   <main>
     <section class="hero" id="about">
       <div class="hero-statement">
-        <p class="eyebrow">THE ONLY WAY TO MAKE A FRIEND IS TO BE ONE</p>
+        <p class="eyebrow">THE ONLY WAY TO MAKE A FRIEND IS TO BE ONE</span></p>
         <h1>Helping you cultivate connection that feels peaceful, not performative.</h1>
       </div>
 
@@ -475,6 +750,77 @@
       </div>
     </section>
 
+    <!-- WHO THIS IS FOR -->
+    <section id="who-for">
+      <div class="who-for">
+        <h2>Is this for you?</h2>
+        <p class="sub">You might be a good fit if any of these land:</p>
+        <div class="who-grid">
+          <div class="who-item">You want deeper friendships but aren't sure where to start</div>
+          <div class="who-item">You show up more guarded — or more accommodating — than you'd like</div>
+          <div class="who-item">You've outgrown your social circle and want to build intentionally</div>
+          <div class="who-item">You're in a new city or new chapter and want real community, not just acquaintances</div>
+          <div class="who-item">You sense something in how you relate to others is holding you back — and you're ready to look at it honestly</div>
+          <div class="who-item">You're done leaving connection to chance</div>
+        </div>
+        <p class="who-not">A note: coaching is not therapy. If you're navigating a clinical mental health concern, I'd encourage you to work with a licensed therapist. What I offer is forward-looking, action-oriented support for people who are fundamentally well and ready to grow.</p>
+      </div>
+    </section>
+
+    <!-- WORK WITH ME -->
+    <section class="work-with-me" id="work-with-me">
+      <div class="work-with-me-inner">
+        <div>
+          <h2>Work with me</h2>
+          <p>I'm currently finishing my coaching certification and opening a small number of <strong>pilot client spots at a reduced rate</strong> — a chance to do real, meaningful work together while I complete the final stage of my training.</p>
+          <ul>
+            <li>1:1 coaching via video call</li>
+            <li>60-minute sessions</li>
+            <li>Typically 6 sessions to start</li>
+            <li>Pilot pricing while spots last</li>
+            <li>First conversation is always free</li>
+          </ul>
+          <a class="inquiry-btn" href="mailto:hello@yourdomain.com?subject=Coaching%20inquiry&body=Hi%20Keragan%2C%0A%0AI%27d%20love%20to%20learn%20more%20about%20working%20together.%0A%0A">Let's talk →</a>
+        </div>
+        <aside class="work-aside">
+          <h3>What we might explore</h3>
+          <p>Every client is different, but here's a sense of the territory: the friendships you want but haven't made, the parts of yourself you're not sure how to bring into relationship, the habits that keep you at arm's length from real connection — and what to do about them.</p>
+          <h3>What to expect</h3>
+          <p>Sessions are warm, honest, and structured around you. I'll ask good questions, reflect patterns back to you, and help you build toward something real — not just insight, but action.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS -->
+    <section class="workshops" id="workshops">
+      <div class="workshops-inner">
+        <div class="workshops-head">
+          <div>
+            <h2>Workshops</h2>
+            <p class="sub">In-person and virtual workshops on social skills, friendship, and community — held in New York City and beyond.</p>
+          </div>
+          <a class="luma-btn" href="https://luma.com/calendar/cal-KTl7LRln0i3yHYZ" target="_blank" rel="noopener noreferrer">View all on Luma ↗</a>
+        </div>
+        <div class="workshop-grid">
+          <div class="workshop-card">
+            <span class="ws-label">Past workshop</span>
+            <h3>Replace with your workshop title</h3>
+            <p class="ws-meta">Date · New York, NY</p>
+          </div>
+          <div class="workshop-card">
+            <span class="ws-label">Past workshop</span>
+            <h3>Replace with your workshop title</h3>
+            <p class="ws-meta">Date · New York, NY</p>
+          </div>
+          <div class="workshop-card">
+            <span class="ws-label">Past workshop</span>
+            <h3>Replace with your workshop title</h3>
+            <p class="ws-meta">Date · New York, NY</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="newsletter" id="writing">
       <div class="newsletter-inner">
         <h2>Peek into my mind (if you dare)</h2>
@@ -511,7 +857,7 @@
       <div class="footer-links">
         <a href="mailto:hello@yourdomain.com">Email</a>
         <a href="https://keraganscontemplations.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
-        <a href="https://www.linkedin.com/keragancavolo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>

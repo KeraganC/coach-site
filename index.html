@@ -886,14 +886,14 @@
         <p class="sub">Personal essays on navigating our inner and outer worlds with courage, honesty, and an open heart.</p>
         <div class="post-grid" id="substack-posts" data-feed-url="https://keraganscontemplations.substack.com/feed">
           <!-- Static fallback: these appear instantly and remain in place if the RSS feed cannot load. -->
-          <a href="https://keraganscontemplations.substack.com/p/resist-the-urge-to-close-your-heart" target="_blank" rel="noopener noreferrer" class="post-tile" style="background-image:url('https://substackcdn.com/image/fetch/$s_!JwGP!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F758d5706-7a88-4a40-a557-cda586894936_1080x1080.png');">
-            <span>Resist the Urge to Close Your Heart<span class="meta">Jul 8, 2024</span></span>
+          <a href="https://keraganscontemplations.substack.com/p/go-ahead-and-cry-about-it" target="_blank" rel="noopener noreferrer" class="post-tile" style="background-image:url('https://substack-post-media.s3.amazonaws.com/public/images/af105388-9987-41f6-8cb6-091ff9b70adf_320x320.png');">
+            <span>Go Ahead and Cry About It<span class="meta">Mar 3, 2026</span></span>
           </a>
-          <a href="https://keraganscontemplations.substack.com/p/advocate-for-yourself-or-else" target="_blank" rel="noopener noreferrer" class="post-tile" style="background-image:url('https://substackcdn.com/image/fetch/$s_!_Gmp!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d79d6f9-f950-4f24-ad83-040edbea01fa_1080x1080.png');">
-            <span>Advocate for Yourself. Or Else...<span class="meta">Jul 3, 2024</span></span>
+          <a href="https://keraganscontemplations.substack.com/p/no-i-dont-believe-in-astrology" target="_blank" rel="noopener noreferrer" class="post-tile" style="background-image:url('https://substack-post-media.s3.amazonaws.com/public/images/b70f6429-f80c-45c4-8d52-88dc8f7fdd15_1200x630.png');">
+            <span>No, I Don’t Believe in Astrology<span class="meta">Feb 20, 2026</span></span>
           </a>
-          <a href="https://keraganscontemplations.substack.com/p/a-chat-gpt-for-your-inner-world-a" target="_blank" rel="noopener noreferrer" class="post-tile" style="background-image:url('https://substackcdn.com/image/fetch/$s_!3O0h!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd36787b4-0a57-439b-a1cc-d472acfc6735_1080x1080.png');">
-            <span>A Chat-GPT for Your Inner World<span class="meta">Jun 10, 2024</span></span>
+          <a href="https://keraganscontemplations.substack.com/p/am-i-the-asshole" target="_blank" rel="noopener noreferrer" class="post-tile" style="background-image:url('https://substack-post-media.s3.amazonaws.com/public/images/024a682c-5b2f-487b-b220-6c303013237b_320x320.png');">
+            <span>Am I the asshole?<span class="meta">Aug 31, 2025</span></span>
           </a>
         </div>
         <div class="newsletter-cta">
@@ -1022,7 +1022,9 @@
         try {
           const xmlText = await fetchFeed();
           const xmlDoc = new DOMParser().parseFromString(xmlText, 'application/xml');
-          const items = Array.from(xmlDoc.getElementsByTagName('item')).slice(0, 3);
+          const items = Array.from(xmlDoc.getElementsByTagName('item')).sort((a, b) => {
+            return new Date(getFirstText(b, 'pubDate')) - new Date(getFirstText(a, 'pubDate'));
+          }).slice(0, 3);
 
           if (items.length < 3) return;
 

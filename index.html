@@ -259,7 +259,7 @@
     }
 
     .substack-button,
-    .inquiry-btn {
+    .button {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
@@ -270,13 +270,18 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
+    .button {
+      font-size: 1rem;
+      padding: 0.9rem 1.8rem;
+    }
+
     .substack-button {
       font-size: 0.95rem;
       padding: 0.8rem 1.6rem;
     }
 
     .substack-button:hover,
-    .inquiry-btn:hover {
+    .button:hover {
       background: var(--ink);
       text-decoration: none;
       transform: translateY(-2px);
@@ -387,33 +392,6 @@
       font-size: 1rem;
       color: var(--ink-soft);
       margin: 0 0 1rem 0;
-    }
-
-    .work-with-me ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1.5rem 0;
-    }
-
-    .work-with-me li {
-      font-size: 1rem;
-      padding: 0.4rem 0;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      align-items: baseline;
-      gap: 0.65rem;
-    }
-
-    .work-with-me li::before {
-      content: "✦";
-      color: var(--accent);
-      font-size: 0.65rem;
-      flex-shrink: 0;
-    }
-
-    .inquiry-btn {
-      font-size: 1rem;
-      padding: 0.9rem 1.8rem;
     }
 
     .work-aside {
@@ -791,22 +769,14 @@
     <section class="work-with-me" id="work-with-me">
       <div class="work-with-me-inner">
         <div>
-          <h2>Work with me</h2>
-          <p>I'm currently finishing my coaching certification and opening a small number of <strong>pilot client spots at a reduced rate</strong> — a chance to do real, meaningful work together while I complete the final stage of my training.</p>
-          <ul>
-            <li>1:1 coaching via video call</li>
-            <li>60-minute sessions</li>
-            <li>Typically 6 sessions to start</li>
-            <li>Pilot pricing while spots last</li>
-            <li>First conversation is always free</li>
-          </ul>
-          <a class="inquiry-btn" href="mailto:hello@yourdomain.com?subject=Coaching%20inquiry&body=Hi%20Keragan%2C%0A%0AI%27d%20love%20to%20learn%20more%20about%20working%20together.%0A%0A">Let's talk →</a>
+          <h2>Interested in working with me?</h2>
+          <p>Let's have a chat! We'll use the call to explore what’s top of mind for you and whether coaching feels like the right fit.</p>
+          <p>Not quite ready to dive in? You can dip your toes into the world of social health by attending one of my future workshops!</p>
+          <a href="mailto:hello@yourdomain.com?subject=Free%2020-minute%20discovery%20call" class="button">Book a free 20-minute discovery call</a>
         </div>
         <aside class="work-aside">
-          <h3>What we might explore</h3>
-          <p>Every client is different, but here's a sense of the territory: the friendships you want but haven't made, the parts of yourself you're not sure how to bring into relationship, the habits that keep you at arm's length from real connection — and what to do about them.</p>
           <h3>What to expect</h3>
-          <p>Sessions are warm, honest, and structured around you. I'll ask good questions, reflect patterns back to you, and help you build toward something real — not just insight, but action.</p>
+          <p>Sessions are warm, honest, and structured around you. My role is to create the space, ask thoughtful questions, and get curious about your inner world - your desires, patterns, fears, values, and longings - and help you build a robust connection to yourself and others.</p>
         </aside>
       </div>
     </section>

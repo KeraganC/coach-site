@@ -56,8 +56,31 @@
     .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
     .wrap-wide { max-width: var(--wide-w); margin: 0 auto; padding: 0 1.5rem; }
 
+    .section-separator {
+      max-width: var(--wide-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-separator::before {
+      content: "";
+      display: block;
+      border-top: 1px solid var(--line);
+    }
+
     /* ---------- HEADER ---------- */
-    header { padding: 2rem 0 1rem; }
+    header {
+      padding: 1.35rem 0 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 241, 0.9);
+      border-bottom: 1px solid rgba(43, 38, 34, 0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    section { scroll-margin-top: 6rem; }
 
     .header-inner {
       max-width: var(--wide-w);
@@ -276,7 +299,7 @@
 
 
     @media (max-width: 480px) {
-      header { padding-top: 1.5rem; }
+      header { padding-top: 1rem; }
       .hero-photo { width: 180px; height: 180px; }
     }
 
@@ -718,6 +741,8 @@
         </div>
       </div>
     </section>
+
+    <div class="section-separator" aria-hidden="true"></div>
 
     <section class="who" id="fit">
       <div>

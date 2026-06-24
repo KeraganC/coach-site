@@ -147,7 +147,7 @@
       line-height: 1;
     }
 
-    /* ---------- LET'S TALK ABOUT ---------- */
+    /* ---------- WHAT WE'LL EXPLORE ---------- */
     .talk-about {
       max-width: var(--wide-w);
       margin: 0 auto;
@@ -159,8 +159,15 @@
     .talk-about h2 {
       font-size: clamp(1.6rem, 3vw, 2rem);
       font-weight: 700;
-      margin: 0 0 2.2rem 0;
+      margin: 0 0 1rem 0;
       letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      color: var(--ink-soft);
+      font-size: 1.03rem;
+      margin: 0 0 2.2rem 0;
+      max-width: 62ch;
     }
 
     .talk-grid {
@@ -283,53 +290,48 @@
 
 
     /* ---------- WHO THIS IS FOR ---------- */
-    .who-for {
+    .who {
       max-width: var(--wide-w);
-      margin: 0 auto 0;
+      margin: 0 auto;
       padding: 4rem 1.5rem;
+      border-bottom: 1px solid var(--line);
     }
 
-    .who-for h2 {
+    .who h2 {
       font-size: clamp(1.6rem, 3vw, 2rem);
       font-weight: 700;
-      margin: 0 0 0.5rem 0;
+      margin: 0 0 1rem 0;
       letter-spacing: -0.02em;
     }
 
-    .who-for .sub {
+    .who .sub {
       color: var(--ink-soft);
-      font-size: 0.98rem;
-      margin: 0 0 2rem 0;
+      font-size: 1.03rem;
+      margin: 0 0 2.2rem 0;
+      max-width: 62ch;
     }
 
     .who-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.85rem 3rem;
-      margin-bottom: 2rem;
+      gap: 1.6rem 3rem;
+      margin-bottom: 0;
     }
 
     .who-item {
-      display: flex;
-      align-items: baseline;
-      gap: 0.65rem;
+      position: relative;
+      padding-left: 1.8rem;
+      color: var(--ink);
       font-size: 1rem;
+      line-height: 1.6;
     }
 
     .who-item::before {
       content: "→";
-      color: var(--accent);
+      position: absolute;
+      left: 0;
+      color: var(--accent-deep);
       font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .who-not {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-      border-left: 2px solid var(--line);
-      padding-left: 1rem;
-      margin-top: 1.5rem;
-      max-width: 60ch;
     }
 
     @media (max-width: 620px) {
@@ -663,7 +665,7 @@
     @media (max-width: 420px) {
       .hero-statement h1 { font-size: 1.95rem; max-width: 13ch; letter-spacing: -0.03em; }
       .hero-photo { width: 150px; height: 150px; }
-      .talk-about { padding: 3rem 1.5rem; }
+      .talk-about, .who { padding: 3rem 1.5rem; }
     }
 
     @media (max-width: 600px) {
@@ -678,7 +680,7 @@
     <div class="header-inner">
       <a href="#" class="logo" aria-label="Connect Better with Keragan home">Connect Better with Keragan</a>
       <nav aria-label="Main navigation">
-        <a href="#talk-about">Let’s Explore</a>
+        <a href="#fit">Let’s Explore</a>
         <a href="#work-with-me">Work With Me</a>
         <a href="#workshops">Workshops</a>
         <a href="#writing">My Writing</a>
@@ -689,7 +691,7 @@
   <main>
     <section class="hero" id="about">
       <div class="hero-statement">
-        <p class="eyebrow">THE ONLY WAY TO MAKE A FRIEND IS TO BE ONE</span></p>
+        <p class="eyebrow">THE ONLY WAY TO MAKE A FRIEND IS TO BE ONE</p>
         <h1>Helping you cultivate connection that feels peaceful, not performative.</h1>
       </div>
 
@@ -718,7 +720,7 @@
     </section>
 
     <section class="who" id="fit">
-      <div class="wrap">
+      <div>
         <h2>Is this for you?</h2>
         <p class="sub">This work might be for you if you're craving connection that feels more intentional, rooted, and alive:</p>
 

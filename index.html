@@ -18,17 +18,9 @@
       --line: rgba(43, 38, 34, 0.12);
       --accent: #D97757;
       --accent-deep: #A84F37;
-      --sage: #7F8E73;
-      --clay: #B9694E;
-      --gold: #C7974B;
-      --plum: #6D5A69;
-      --blue: #5E748D;
-      --moss: #62735C;
-
       --font-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --font-script: 'Caveat', cursive;
 
-      --max-w: 760px;
       --wide-w: 980px;
     }
 
@@ -52,9 +44,6 @@
     a:hover { text-decoration: underline; }
     a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     img { display: block; max-width: 100%; }
-
-    .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
-    .wrap-wide { max-width: var(--wide-w); margin: 0 auto; padding: 0 1.5rem; }
 
     .section-separator {
       max-width: var(--wide-w);
@@ -119,23 +108,15 @@
     .hero { padding: 2rem 0 4rem; }
 
     .hero-photo {
-      width: 220px;
-      height: 220px;
+      width: 260px;
+      height: 260px;
       border-radius: 50%;
-      margin: 0 0 2rem 0;
+      margin: 0;
       object-fit: cover;
       object-position: center 25%;
       border: 1px solid rgba(43, 38, 34, 0.12);
       box-shadow: 0 10px 30px rgba(43, 38, 34, 0.10);
       background: rgba(255,255,255,0.4);
-    }
-
-    .hero h1 {
-      font-size: clamp(1.9rem, 4vw, 2.65rem);
-      font-weight: 700;
-      margin: 0 0 1.5rem 0;
-      line-height: 1.23;
-      letter-spacing: -0.02em;
     }
 
     .eyebrow {
@@ -146,8 +127,6 @@
       text-transform: uppercase;
       margin: 0 0 0.75rem;
     }
-
-    .keep-together { white-space: nowrap; }
 
     .hero p {
       font-size: 1.08rem;
@@ -179,9 +158,16 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .talk-about h2 {
+    .talk-about h2,
+    .newsletter h2,
+    .who h2,
+    .work-with-me h2,
+    .workshops h2 {
       font-size: clamp(1.6rem, 3vw, 2rem);
       font-weight: 700;
+    }
+
+    .talk-about h2 {
       margin: 0 0 1rem 0;
       letter-spacing: -0.02em;
     }
@@ -219,8 +205,6 @@
     .newsletter{ padding: 1rem 0 4rem; }
     .newsletter-inner{ max-width: 980px; margin: 0 auto; padding: 0 1.5rem; }
     .newsletter h2{
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 700;
       margin: 0 0 0.4rem 0;
     }
     .newsletter .sub{
@@ -274,19 +258,25 @@
       justify-content: center;
     }
 
-    .substack-button {
+    .substack-button,
+    .inquiry-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       font-weight: 700;
-      font-size: 0.95rem;
       color: var(--cream);
       background: var(--accent-deep);
-      padding: 0.8rem 1.6rem;
       border-radius: 100px;
       transition: background 0.2s ease, transform 0.2s ease;
     }
-    .substack-button:hover {
+
+    .substack-button {
+      font-size: 0.95rem;
+      padding: 0.8rem 1.6rem;
+    }
+
+    .substack-button:hover,
+    .inquiry-btn:hover {
       background: var(--ink);
       text-decoration: none;
       transform: translateY(-2px);
@@ -299,7 +289,6 @@
 
     @media (max-width: 480px) {
       header { padding-top: 1rem; }
-      .hero-photo { width: 180px; height: 180px; }
     }
 
     @media (max-width: 600px) {
@@ -320,8 +309,6 @@
     }
 
     .who h2 {
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 700;
       margin: 0 0 1rem 0;
       letter-spacing: -0.02em;
     }
@@ -392,8 +379,6 @@
     }
 
     .work-with-me h2 {
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 700;
       margin: 0 0 1rem 0;
       letter-spacing: -0.02em;
     }
@@ -427,22 +412,8 @@
     }
 
     .inquiry-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-weight: 700;
       font-size: 1rem;
-      color: var(--cream);
-      background: var(--accent-deep);
       padding: 0.9rem 1.8rem;
-      border-radius: 100px;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .inquiry-btn:hover {
-      background: var(--ink);
-      text-decoration: none;
-      transform: translateY(-2px);
     }
 
     .work-aside {
@@ -453,7 +424,6 @@
     }
 
     .work-aside h3 {
-      font-size: 1rem;
       font-weight: 700;
       color: var(--accent-deep);
       margin: 0 0 0.3rem 0;
@@ -495,8 +465,6 @@
     }
 
     .workshops h2 {
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 700;
       margin: 0 0 0.3rem 0;
       letter-spacing: -0.02em;
     }
@@ -628,9 +596,7 @@
 
     .footer-links a:hover { color: var(--accent-deep); }
   
-
     /* ---------- HERO MOCKUP: headline first, intro + photo second ---------- */
-    .hero { padding: 2rem 0 4rem; }
 
     .hero-statement {
       max-width: var(--wide-w);
@@ -640,6 +606,7 @@
 
     .hero-statement h1 {
       font-size: clamp(2.35rem, 5vw, 4.2rem);
+      font-weight: 700;
       line-height: 1.04;
       letter-spacing: -0.045em;
       max-width: 21ch;
@@ -683,13 +650,6 @@
     }
 
     .hero-photo-wrap { padding-top: 0.35rem; }
-
-    .hero-photo {
-      width: 260px;
-      height: 260px;
-      margin: 0;
-      border-radius: 50%;
-    }
 
     @media (max-width: 760px) {
       .hero-statement { padding-bottom: 2.25rem; }

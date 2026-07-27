@@ -109,15 +109,15 @@
     .hero { padding: 2rem 0 4rem; }
 
     .hero-photo {
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
+      width: 280px;
+      height: 375px;
+      border-radius: 1.35rem;
       margin: 0;
       object-fit: cover;
-      object-position: center 25%;
+      object-position: center 30%;
       border: 1px solid rgba(43, 38, 34, 0.12);
       box-shadow: 0 10px 30px rgba(43, 38, 34, 0.10);
-      background: rgba(255,255,255,0.4);
+      background: var(--cream);
     }
 
     .eyebrow {
@@ -608,7 +608,7 @@
       margin: 0 auto;
       padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 260px;
+      grid-template-columns: minmax(0, 1fr) 280px;
       gap: clamp(2rem, 6vw, 5rem);
       align-items: start;
     }
@@ -645,13 +645,17 @@
       .hero-statement { padding-bottom: 2.25rem; text-align: center; }
       .hero-statement h1 { max-width: 16ch; margin: 0 auto; }
       .hero-about { grid-template-columns: 1fr; gap: 1.75rem; }
-      .hero-photo-wrap { order: -1; }
-      .hero-photo { width: 180px; height: 180px; }
+      .hero-photo-wrap {
+        order: -1;
+        display: flex;
+        justify-content: center;
+      }
+      .hero-photo { width: 210px; height: 280px; border-radius: 1rem; }
     }
 
     @media (max-width: 420px) {
       .hero-statement h1 { font-size: 1.95rem; max-width: 13ch; letter-spacing: -0.03em; }
-      .hero-photo { width: 150px; height: 150px; }
+      .hero-photo { width: 170px; height: 225px; }
       .talk-about, .who { padding: 3rem 1.5rem; }
     }
 

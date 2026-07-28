@@ -37,7 +37,7 @@
 .reflection-progress p { margin: 0 !important; }
 .reflection-meta { display: flex; align-items: center; gap: 24px; }
 .reflection-meta > p { color: var(--principal-accent); font-size: 21px; font-weight: 700; }
-.reflection-timer { position: absolute; bottom: 42px; left: var(--slide-padding); z-index: 2; display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 5px 7px 5px 16px; border: 1px solid var(--border); border-radius: 6px; background: var(--paper-background); }
+.reflection-timer { position: absolute; bottom: 112px; left: var(--slide-padding); z-index: 2; display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 5px 7px 5px 16px; border: 1px solid var(--border); border-radius: 6px; background: var(--paper-background); }
 .reflection-timer time { min-width: 58px; color: var(--main-text); font-size: 23px; font-variant-numeric: tabular-nums; font-weight: 700; }
 .reflection-timer button { height: 36px; border: 0; border-radius: 4px; background: transparent; color: var(--principal-accent); font: inherit; font-size: 17px; font-weight: 700; cursor: pointer; }
 .reflection-timer button:hover, .reflection-timer button:focus-visible { background: var(--slide-background); outline: 2px solid transparent; }

@@ -92,6 +92,24 @@
 .slide { position: relative; display: flex !important; flex-direction: column; justify-content: center; overflow: hidden; padding: var(--slide-padding) !important; background: var(--slide-background); }
 .slide::after { content: ""; position: absolute; right: 48px; bottom: 43px; width: 76px; border-top: 2px solid var(--border); }
 .slide--cover::after, .slide--final-question::after, .slide--contact::after { display: none; }
+.slide-watermark {
+  position: absolute;
+  bottom: 43px;
+  left: var(--slide-padding);
+  z-index: 3;
+  display: grid;
+  gap: 5px;
+  color: rgba(43, 38, 34, 0.48);
+  font-family: var(--body-font);
+  line-height: 1.08;
+  text-align: left;
+  pointer-events: none;
+}
+.slide-watermark strong { font-size: 22px; font-weight: 600; letter-spacing: 0; }
+.slide-watermark span { color: inherit; font-size: 22px; font-weight: 400; letter-spacing: 0; }
+.workshop-cover .slide-watermark,
+.thank-you-slide .slide-watermark,
+.slide--contact .slide-watermark { display: none; }
 .accent-sage { --secondary-accent: var(--sage); }
 .accent-plum { --principal-accent: var(--plum); --secondary-accent: var(--plum); }
 .accent-rust { --principal-accent: #8e402e; }

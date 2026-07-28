@@ -1,3 +1,11 @@
+document.querySelectorAll('.slides > section.slide').forEach((slide) => {
+  const watermark = document.createElement('div');
+  watermark.className = 'slide-watermark';
+  watermark.setAttribute('aria-hidden', 'true');
+  watermark.innerHTML = '<strong>Keragan Cavolo</strong><span>Social Health &amp; Connection Coach</span>';
+  slide.appendChild(watermark);
+});
+
 Reveal.initialize({
   width: 1920,
   height: 1080,
